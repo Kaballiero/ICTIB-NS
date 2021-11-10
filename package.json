@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "git": "^0.1.5",
+    "nest": "^0.1.6",
+    "npm-git-install": "^0.3.0"
+  },
+  "scripts": {
+    "frontend": "npm start --prefix frontend",
+    "server": "npm run start:dev --prefix server",
+    "project": "concurrently \"npm run server\" \"npm run frontend\""
+  }
+}
