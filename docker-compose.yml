@@ -2,9 +2,8 @@ version: '3.0'
 
 services:
     
-    command: nx serve frontend
   main:
-    container_name: main
+    container_name: main-ictis
     build:
       context: .
     env_file:
@@ -14,12 +13,13 @@ services:
       - /app/node_modules
     ports:
     - 5000:5000
-    
+    - 3333:3333
+    restart: on-failure    
     command: npm start
     depends_on:
       - postgres
   postgres:
-    container_name: postgres
+    container_name: postgres-ictis
 
     image: postgres:12 
     env_file:
@@ -30,7 +30,7 @@ services:
       POSTGRES_DB: postgres
       PG_DATA: /var/lib/postgresql/data
     ports:
-      - 5432:5432
+      - 6432:5432
     volumes: 
       - pgdata:/var/lib/postgresql/data
     restart: always

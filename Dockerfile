@@ -5,9 +5,12 @@ WORKDIR /app
 COPY package*.json ./
 
 RUN npm install --production
+RUN npm install react-scripts@3.4.1 -g --silent
 
 COPY . .
 
 COPY ./dist ./dist
 
-CMD ['npm', 'run', 'start:dev']
+EXPOSE 4200
+
+CMD [ "npm", "start" ]
