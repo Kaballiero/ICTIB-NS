@@ -40,7 +40,9 @@
       "executor": "@nrwl/web:dev-server",
       "options": {
         "buildTarget": "frontend:build",
-        "hmr": true
+        "hmr": true,
+        "port": 4200,
+        "host": "0.0.0.0"
       },
       "configurations": {
         "production": {

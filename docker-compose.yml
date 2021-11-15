@@ -3,23 +3,25 @@ version: '3.0'
 services:
     
   main:
-    container_name: main-ictis
+    container_name: main
+    stdin_open: true
     build:
       context: .
     env_file:
       - .env
     volumes:
-      - .:/app
+      - .:/app  
       - /app/node_modules
     ports:
-    - 5000:5000
-    - 3333:3333
+      - 5000:5000
+      - 4200:4200
+      - 4400:4400
     restart: on-failure    
     command: npm start
     depends_on:
       - postgres
   postgres:
-    container_name: postgres-ictis
+    container_name: postgres
 
     image: postgres:12 
     env_file:
@@ -30,7 +32,7 @@ services:
       POSTGRES_DB: postgres
       PG_DATA: /var/lib/postgresql/data
     ports:
-      - 6432:5432
+      - 5432:5432
     volumes: 
       - pgdata:/var/lib/postgresql/data
     restart: always

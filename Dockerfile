@@ -1,16 +1,17 @@
-FROM node:12.13-alpine
+FROM node:14.18-alpine
+
+RUN apk update && apk add git
 
 WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install --production
-RUN npm install react-scripts@3.4.1 -g --silent
+RUN npm install
 
 COPY . .
 
-COPY ./dist ./dist
-
 EXPOSE 4200
+EXPOSE 4400
+EXPOSE 5000
 
 CMD [ "npm", "start" ]

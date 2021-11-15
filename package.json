@@ -2,17 +2,21 @@
   "name": "ictis-dunice-project",
   "version": "0.0.0",
   "license": "MIT",
+  "engines": {
+    "node": "^14.18",
+    "npm": "^6.11.0 || ^7.5.6",
+    "yarn": ">= 1.13.0"
+  },
   "scripts": {
-    "start": "nx serve",
-    "build": "nx build",
-    "test": "nx test",
+    "start": "nx run-many --target=serve --projects=frontend,backend --parallel",
+    "build": "nx build frontend & nx build backend",
+    "test": "nx test frontend & nx test backend",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "private": true,
   "dependencies": {
-    "@emotion/react": "^11.5.0",
-    "@mui/material": "^5.1.0",
+    "@emotion/react": "^11.6.0",
     "@nestjs/common": "^7.0.0",
     "@nestjs/config": "^1.1.0",
     "@nestjs/core": "^7.0.0",
