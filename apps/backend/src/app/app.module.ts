@@ -4,14 +4,14 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import configuration from '../config';
 
-import { ConfigModule } from '@nestjs/config';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { UserModule } from './entities/user/user.module';
 
 @Module({
   imports: [
-  ConfigModule.forRoot({
-    load: [configuration],
-    isGlobal: true,
-  })],
+    TypeOrmModule.forRoot(configuration),
+    UserModule,
+],
   controllers: [AppController],
   providers: [AppService],
 })

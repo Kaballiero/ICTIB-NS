@@ -42,7 +42,10 @@
         "buildTarget": "frontend:build",
         "hmr": true,
         "port": 4200,
-        "host": "0.0.0.0"
+        "host": "0.0.0.0",
+        "ssl": true,
+        "sslKey": "./certs/localhost/localhost.key",
+        "sslCert": "./certs/localhost/localhost.crt"
       },
       "configurations": {
         "production": {
@@ -70,6 +73,7 @@
       "executor": "@nrwl/storybook:storybook",
       "options": {
         "uiFramework": "@storybook/react",
+        "host": "0.0.0.0",
         "port": 4400,
         "config": {
           "configFolder": "apps/frontend/.storybook"

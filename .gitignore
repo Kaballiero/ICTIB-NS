@@ -29,9 +29,10 @@
 /connect.lock
 /coverage
 /libpeerconnection.log
-npm-debug.log
-yarn-error.log
-testem.log
+*.log
+# npm-debug.log
+# yarn-error.log
+# testem.log
 /typings
 
 # System Files

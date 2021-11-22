@@ -1,6 +1,6 @@
 FROM node:14.18-alpine
 
-RUN apk update && apk add git
+RUN apk update && apk add --update git python3 make g++
 
 WORKDIR /app
 

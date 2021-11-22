@@ -1,10 +1,10 @@
 {
-  "npmScope": "ictis-dunice-project",
+  "npmScope": "project",
   "affected": {
     "defaultBase": "main"
   },
   "cli": {
-    "defaultCollection": "@nrwl/nest"
+    "defaultCollection": "@nrwl/react"
   },
   "implicitDependencies": {
     "package.json": {
@@ -18,7 +18,7 @@
       "runner": "@nrwl/nx-cloud",
       "options": {
         "cacheableOperations": ["build", "lint", "test", "e2e"],
-        "accessToken": "ODQ5ZWNmNmEtZDliZS00M2RmLWJkMDUtNzkxZjZjYTNmMzVmfHJlYWQtd3JpdGU="
+        "accessToken": "YTc4ODQyZGEtY2JiOC00MTJmLWJjYjAtMGMyM2I3YjJhYmVmfHJlYWQtd3JpdGU="
       }
     }
   },
@@ -30,7 +30,6 @@
       }
     ]
   },
-  "defaultProject": "backend",
   "generators": {
     "@nrwl/react": {
       "application": {
@@ -46,5 +45,6 @@
         "linter": "eslint"
       }
     }
-  }
+  },
+  "defaultProject": "frontend"
 }

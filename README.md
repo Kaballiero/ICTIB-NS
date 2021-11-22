@@ -1,6 +1,22 @@
 
 
-# Tes
+# Project ICTIS Platform
+
+## For devlelopment
+
+### Run
+
+```bash
+npm run dev
+```
+
+### Consider 
+
+adding localhost certificate (crt) file as trusted on your system level
+
+Note 19 November 2021: frontend and backend are now served on https (to be able to handle given openID callback URI)
+
+-----
 
 This project was generated using [Nx](https://nx.dev).
 
@@ -45,7 +61,7 @@ Run `nx g @nrwl/react:lib my-lib` to generate a library.
 
 > You can also use any of the plugins above to generate libraries as well.
 
-Libraries are shareable across libraries and applications. They can be imported from `@tes/mylib`.
+Libraries are shareable across libraries and applications. They can be imported from `@project/mylib`.
 
 ## Development server
 
